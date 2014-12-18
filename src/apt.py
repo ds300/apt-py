@@ -8,7 +8,10 @@ def _read_int (bytes, offset):
 def _read_float (bytes, offset):
   return struct.unpack_from(">f", bytes, offset)
 
-class APT:
+def jimmy (blub):
+  print blub
+
+class APT(object):
   """The Anchored-Packed-Tree"""
   def __init__(self):
     self.edges = dict()
@@ -17,7 +20,7 @@ class APT:
 
   @staticmethod
   def from_byte_array(bytes):
-    _, apt = _from_byte_array(bytes, 0, 0, None)
+    _, apt = APT._from_byte_array(bytes, 0, 0, None)
     return apt
 
   @staticmethod
@@ -45,7 +48,7 @@ class APT:
 
     for i in xrange(num_kids):
       edge_label = _read_int(bytes, offset)
-      offset, kid = _from_byte_array(bytes, offset + 4, -edge_label, result)
+      offset, kid = APT._from_byte_array(bytes, offset + 4, -edge_label, result)
       result.edges[edge_label] = kid
 
     return offset, result

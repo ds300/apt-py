@@ -1,2 +1,2 @@
-bsddb3
 scipy
+plyvel
