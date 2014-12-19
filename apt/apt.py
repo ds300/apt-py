@@ -8,9 +8,6 @@ def _read_int (bytes, offset):
 def _read_float (bytes, offset):
   return struct.unpack_from(">f", bytes, offset)
 
-def jimmy (blub):
-  print blub
-
 class APT(object):
   """The Anchored-Packed-Tree"""
   def __init__(self):
@@ -53,4 +50,5 @@ class APT(object):
 
     return offset, result
 
-
+    def __str__(self):
+      return "APT of weight " + self.sum + "."

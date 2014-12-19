@@ -6,5 +6,5 @@ setup(name='apt-python',
       version='0.1.0',
       description='apt reading and manipulating for python',
       author="David Sheldrick",
-      package_dir={'apt': 'src'},
+      package_dir={'apt': 'apt'},
       packages=['apt'])
