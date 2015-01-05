@@ -1,0 +1,27 @@
+0	He	He	PRP	1	nsubj
+1	folded	folded	VBP	-1	root
+2	the	the	DT	5	det
+3	clean	clean	JJ	5	amod
+4	dry	dry	JJ	5	amod
+5	clothes	clothes	NNS	1	dobj
+
+0	We	We	PRP	1	nsubj
+1	bought	bought	VBP	-1	root
+2	some	some	DT	7	det
+3	slightly	slightly	JJ	4	advmod
+4	fizzy	fizzy	JJ	7	amod
+5	dry	dry	JJ	7	amod
+6	white	white	JJ	7	amod
+7	wine	wine	NN	1	dobj
+
+0	I	I	PRP	1	nsubj
+1	hate	hate	VBP	-1	root
+2	sweet	sweet	JJ	3	amod
+3	wine	wine	NN	1	dobj
+
+0	She	She	PRP	1	nsubj
+1	hung	hung	VBD	-1	root
+2	up	up	RP	1	prt
+3	the	the	DT	5	det
+4	wet	wet	JJ	5	amod
+5	clothes	clothes	NNS	1	dobj
