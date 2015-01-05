@@ -1,4 +1,5 @@
 from .apt import APT
+import base64
 # from functools import lru_cache
 import plyvel
 from os import environ
@@ -16,17 +17,12 @@ class Lexicon(object):
     return self
 
   def __exit__(self, type, value, tb):
-    self.db.close() # NOPE switch to leveldb-py ? why are these things so shit?
+    self.db.close()
 
 
   def get(self, i):
-    gotten = self.db.get(packint(i))
-    if gotten:
-      return APT.from_byte_array(gotten)
+    from_db = self.db.get(packint(i))
+    if from_db:
+      return APT.from_byte_array(from_db)
     else:
       return APT()
-
-
-
-
-# @lru_cache(maxSize=environ['APT_CACHE_SIZE'] || 10000)
